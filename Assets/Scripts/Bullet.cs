@@ -38,6 +38,8 @@ public class Bullet : MonoBehaviour
     {
         if(collision.collider.tag != "Bounce")
         {
+            ContactPoint cp = collision.GetContact(0);
+            if(Vector3.Angle(cp.normal, Vector3.up) <=45)//angle entre la normale et la verticale est plus grand que 45
             playerTransform.position = collision.GetContact(0).point;
             Destroy(gameObject);
         }

@@ -36,8 +36,11 @@ public class Bullet : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        playerTransform.position = collision.GetContact(0).point;
-        Destroy(gameObject);
+        if(collision.collider.tag != "Bounce")
+        {
+            playerTransform.position = collision.GetContact(0).point;
+            Destroy(gameObject);
+        }
     }
 
     // Update is called once per frame

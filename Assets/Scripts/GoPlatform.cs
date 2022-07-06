@@ -10,8 +10,12 @@ public class GoPlatform : MonoBehaviour
         if(other.tag=="Player")
         //if(other.CompareTag("Player")) Pour gagner du stock si jamais
     {
-        SceneManager.LoadScene("Victory");
+        SceneManager.LoadScene("Level02");
     }
+        if(other.tag=="Player2")
+        {
+            SceneManager.LoadScene("Victory");
+        }
     }
     
 }

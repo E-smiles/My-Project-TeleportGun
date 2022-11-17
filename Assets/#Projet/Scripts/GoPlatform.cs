@@ -17,5 +17,9 @@ public class GoPlatform : MonoBehaviour
             SceneManager.LoadScene("Victory");
         }
     }
+
+    public void StartTheGame(){
+        SceneManager.LoadScene("Level01");
+    }
     
 }
